@@ -1,0 +1,89 @@
+{
+    "name": "os-monitor",
+    "displayName": "OS Monitor",
+    "description": "Displays OS name and system resource usage in the status bar",
+    "publisher": "marhaendev",
+    "author": {
+        "name": "MarhaenDev",
+        "url": "https://hasanaskari.com"
+    },
+    "homepage": "https://vsix.hasanaskari.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marhaendev/vsix-os-monitor"
+    },
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "OS Monitor",
+            "properties": {
+                "osMonitor.refreshInterval": {
+                    "type": "number",
+                    "default": 1000,
+                    "description": "Refresh interval in milliseconds"
+                },
+                "osMonitor.showOS": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show OS Name"
+                },
+                "osMonitor.showCPU": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show CPU Usage"
+                },
+                "osMonitor.showRAM": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show RAM Usage"
+                },
+                "osMonitor.showDisk": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show Disk Usage"
+                },
+                "osMonitor.showTraffic": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show Network Traffic"
+                },
+                "osMonitor.showBandwidth": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show Bandwidth (Speed Test)"
+                },
+                "osMonitor.iconOnly": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Hide text labels and show only icons and values"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.90.0",
+        "@types/node": "^20.0.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint": "^8.57.0",
+        "typescript": "^5.4.0"
+    }
+}
