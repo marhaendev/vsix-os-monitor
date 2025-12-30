@@ -16,6 +16,7 @@
     "engines": {
         "vscode": "^1.90.0"
     },
+    "license": "CC-BY-NC-4.0",
     "categories": [
         "Other"
     ],
