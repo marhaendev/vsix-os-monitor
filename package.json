@@ -2,6 +2,19 @@
     "name": "os-monitor",
     "displayName": "OS Monitor",
     "description": "Displays OS name and system resource usage in the status bar",
+    "icon": "icon.png",
+    "keywords": [
+        "os",
+        "monitor",
+        "cpu",
+        "ram",
+        "memory",
+        "disk",
+        "network",
+        "traffic",
+        "bandwidth",
+        "linux"
+    ],
     "publisher": "marhaendev",
     "author": {
         "name": "MarhaenDev",
